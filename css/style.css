@@ -574,6 +574,8 @@ body {
   border-radius: 50%;
   z-index: 2000;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
 }
 .navigation__background {
   height: 6rem;
@@ -590,11 +592,11 @@ body {
   height: 100vh;
   position: fixed;
   top: 0;
-  right: 0;
+  left: 0;
   z-index: 1500;
   opacity: 0;
   width: 0;
-  transition: all 0.8s;
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 .navigation__list {
   position: absolute;
@@ -603,6 +605,7 @@ body {
   transform: translate(-50%, -50%);
   list-style: none;
   text-align: center;
+  width: 100%;
 }
 .navigation__item {
   margin: 1rem;
@@ -616,7 +619,7 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #ffffff 50%);
-  background-size: 240%;
+  background-size: 250%;
   transition: all 0.4s;
 }
 .navigation__link:link span, .navigation__link:visited span {
