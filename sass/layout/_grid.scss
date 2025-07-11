@@ -4,7 +4,18 @@
 
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;
+
+        @include respond(tab-port) {
+            margin-bottom: $gutter-vertical-small;
+        }
+        
     }
+
+    @include respond(tab-port) {
+        max-width: 50rem; // Limit width on smaller screens
+        padding: 0 3rem ;
+    }
+
 
     @include clearfix; // Clearfix to contain floated children
 
@@ -13,6 +24,14 @@
 
         &:not(:last-child) {
             margin-right: $gutter-horizontal;
+            @include respond(tab-port) {
+                margin-right: 0; // Remove right margin on smaller screens
+                margin-bottom: $gutter-vertical-small; // Add bottom margin for spacing
+            }
+        }
+
+        @include respond(tab-port) {
+            width: 100% !important; // Full width on smaller screens
         }
     }
 
