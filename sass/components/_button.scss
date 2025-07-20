@@ -14,7 +14,6 @@
         //CHANGE FOR THE <BUTTON> ELEMENT
         border: none;
         cursor: pointer;
-
     }
 
     &:hover {
@@ -97,3 +96,12 @@
         box-shadow: 0 .5rem 1rem rgba($color-black, .15);
     }
 } 
+
+@include respond(phone) {
+  .btn--full {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+  }
+}

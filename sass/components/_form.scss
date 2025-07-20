@@ -95,9 +95,19 @@
             opacity: 0;
             transition: opacity .2s;
         }
+
+        @include respond(phone) {
+            border: 2px solid $primary-color;
+            height: 2rem;
+            width: 2rem;
+
+            left: 1rem;
+            top: .2rem;
+        }
     }
 
     &__radio-input:checked ~ &__radio-label &__radio-button::after {
         opacity: 1;
     }
 }
+
